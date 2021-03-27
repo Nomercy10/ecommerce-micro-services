@@ -1,2 +1,0 @@
-
-MongoDB admin user: Rushikesh/Password@123
