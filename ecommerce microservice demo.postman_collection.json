@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "f4feb91b-f2b7-400d-a4b4-81021adc5237",
+		"name": "ecommerce microservice demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\":\"Dave\",\n    \"lastName\": \"kin\",\n    \"email\":\"dave@kin.com\",\n\t\"phone\": 9808971983,\n\t\"address\": \"some address of the user\",\n\t\"orders\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/user",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"user"
+					]
+				},
+				"description": "This will create a new user in our database"
+			},
+			"response": [
+				{
+					"name": "Example1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\":\"Dave\",\n    \"lastName\": \"kin\",\n    \"email\":\"dave@kin.com\",\n\t\"phone\": 9808971983,\n\t\"address\": \"some address of the user\",\n\t\"orders\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5050/user",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "User created.."
+				}
+			]
+		},
+		{
+			"name": "Create New Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Order 12\",\n    \"amount\":99,\n    \"image\":\"https://some_image_url.jpg\",\n    \"createdAt\":\"2021-02-13\",\n    \"qty\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/users/605f49472e897c80fd718220/order",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"users",
+						"605f49472e897c80fd718220",
+						"order"
+					]
+				},
+				"description": "This will create new order in our database"
+			},
+			"response": []
+		},
+		{
+			"name": "GET all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5050/users",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"users"
+					]
+				},
+				"description": "This will fetch all the users in our DB"
+			},
+			"response": [
+				{
+					"name": "Example 1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5050/users",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1440"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5a0-/yQFkVSlVovX1bZzGsGdrZ1D8DI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 27 Mar 2021 17:35:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"orders\": [\n            \"605f636242ea0401f4ffe9b0\"\n        ],\n        \"_id\": \"605f3c7d15d9f979fe354ffe\",\n        \"firstName\": \"Vin\",\n        \"lastName\": \"Diesel\",\n        \"email\": \"vin@fast.com\",\n        \"phone\": 890810923,\n        \"address\": \"some address of the user\",\n        \"__v\": 1\n    },\n    {\n        \"orders\": [],\n        \"_id\": \"605f3c9115d9f979fe354fff\",\n        \"firstName\": \"Kevin\",\n        \"lastName\": \"Hart\",\n        \"email\": \"kevin@hart.com\",\n        \"phone\": 8739213243,\n        \"address\": \"some address of the user\",\n        \"__v\": 0\n    },\n    {\n        \"orders\": [],\n        \"_id\": \"605f47990e790a806a212af4\",\n        \"firstName\": \"Dave\",\n        \"lastName\": \"kin\",\n        \"email\": \"dave@kin.com\",\n        \"phone\": 9808971983,\n        \"address\": \"some address of the user\",\n        \"__v\": 0\n    },\n    {\n        \"orders\": [],\n        \"_id\": \"605f49372e897c80fd71821f\",\n        \"firstName\": \"Jack\",\n        \"lastName\": \"Ma\",\n        \"email\": \"jack@ma.com\",\n        \"phone\": 987981723,\n        \"address\": \"some address of the user\",\n        \"__v\": 0\n    },\n    {\n        \"orders\": [\n            \"605f626842ea0401f4ffe9af\",\n            \"605f6c29cff462069562f77a\",\n            \"605f6c31cff462069562f77b\",\n            \"605f6c35cff462069562f77c\",\n            \"605f6c38cff462069562f77d\",\n            \"605f6c3bcff462069562f77e\"\n        ],\n        \"_id\": \"605f49472e897c80fd718220\",\n        \"firstName\": \"Joe\",\n        \"lastName\": \"Biden\",\n        \"email\": \"joe@biden.com\",\n        \"phone\": 987981723,\n        \"address\": \"some address of the user\",\n        \"__v\": 6\n    },\n    {\n        \"orders\": [\n            \"605f407afb8b6c7d506aff07\",\n            \"605f47094e30e5809fc3153d\"\n        ],\n        \"_id\": \"605f4dbcf1b52e81d761c375\",\n        \"firstName\": \"Rachel\",\n        \"lastName\": \"Green\",\n        \"email\": \"rachel@green.com\",\n        \"phone\": 98123123,\n        \"address\": \"some address of the user\",\n        \"__v\": 0\n    },\n    {\n        \"orders\": [],\n        \"_id\": \"605f6cb5fd586106ce758f56\",\n        \"firstName\": \"Dave\",\n        \"lastName\": \"kin\",\n        \"email\": \"dave@kin.com\",\n        \"phone\": 9808971983,\n        \"address\": \"some address of the user\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET all orders for a customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5151/orders?uid=",
+					"host": [
+						"localhost"
+					],
+					"port": "5151",
+					"path": [
+						"orders"
+					],
+					"query": [
+						{
+							"key": "uid",
+							"value": ""
+						}
+					]
+				},
+				"description": "This will fetch all the orders from our DB"
+			},
+			"response": []
+		},
+		{
+			"name": "Get an order for single customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5151/orders?oid=605f626842ea0401f4ffe9af&uid=605f49472e897c80fd718220",
+					"host": [
+						"localhost"
+					],
+					"port": "5151",
+					"path": [
+						"orders"
+					],
+					"query": [
+						{
+							"key": "oid",
+							"value": "605f626842ea0401f4ffe9af"
+						},
+						{
+							"key": "uid",
+							"value": "605f49472e897c80fd718220"
+						}
+					]
+				},
+				"description": "This will fetch the specific order for a selected customer"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5050/users/97989871293",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"users",
+						"97989871293"
+					]
+				},
+				"description": "This will find and delete the user by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an Order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5151/orders/97989871293",
+					"host": [
+						"localhost"
+					],
+					"port": "5151",
+					"path": [
+						"orders",
+						"97989871293"
+					]
+				},
+				"description": "This will find the order by ID and delete it"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all orders for a user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5050/users/605f49472e897c80fd718220/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"users",
+						"605f49472e897c80fd718220",
+						"orders"
+					]
+				},
+				"description": "This will delete all the order documents of the selected user"
+			},
+			"response": []
+		}
+	]
+}

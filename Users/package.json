@@ -1,0 +1,30 @@
+{
+  "name": "users-microservice",
+  "version": "1.0.0",
+  "description": "A micro service which does all the CRUD operations for user and its orders",
+  "main": "Users.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nomercy10/ecommerce-micro-services.git"
+  },
+  "keywords": [
+    "ecommerce",
+    "micro-service",
+    "microservices"
+  ],
+  "author": "Rushikesh Mhetre (https://github.com/Nomercy10)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nomercy10/ecommerce-micro-services/issues"
+  },
+  "homepage": "https://github.com/Nomercy10/ecommerce-micro-services#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.2"
+  }
+}
