@@ -33,7 +33,8 @@ And of course this repo itself is open source on GitHub.
 ## Installation
 
 ### Postman
-Import `ecommerce microservice demo.postman_collection.json` in your postman for the API testing
+- Requires Postman to run the APIs
+- Use `ecommerce microservice demo.postman_collection.json` from the repo root and import in your postman.
 
 #### Users
 Requires [Node.js](https://nodejs.org/) v10+ to run.
@@ -57,9 +58,6 @@ npm i --save express mongoose body-parser axios nodemon
 nodemon Orders.js
 ```
 
-### Testing/Running
-- Requires Postman to run the APIs
-- Use `ecommerce microservice demo.postman_collection.json` from the repo root and import in your postman.
 
 
 ## License
