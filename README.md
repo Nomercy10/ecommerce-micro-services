@@ -32,6 +32,9 @@ And of course this repo itself is open source on GitHub.
 
 ## Installation
 
+### Postman
+Import `ecommerce microservice demo.postman_collection.json` in your postman for the API testing
+
 #### Users
 Requires [Node.js](https://nodejs.org/) v10+ to run.
 
