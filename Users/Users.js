@@ -27,6 +27,9 @@ async function initialLoad() {
 }
 
 initialLoad()
+/**
+ * IMPROVEMENT: Each API can sit in a different file if we want to scale the application to perform larger operations
+ */
 
 // Main endpoint
 app.get("/", (req, res) => {
@@ -68,11 +71,6 @@ app.get("/users/:uid/orders", async (req, res) => {
 	}).catch( err => {
 		res.sendStatus(404).send(err)
 	})
-})
-
-// GET an order for a user
-app.get("/users/:uid/orders/:oid", async (req, res) => {
-	res.send("Here is the specific order of the selected user")
 })
 
 // Create new user

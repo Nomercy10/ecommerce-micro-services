@@ -29,6 +29,12 @@ initialLoad()
 
 // GET all orders for a user
 // GET single order for a user
+/**
+ * A single api can perform multiple operations based on the query params.
+ * Also to improve this logic, we can create different util files or modules to handle the separate logic 
+ * based on these query params.
+ * As this is a straightforward simple condition, I have added them using if else condition here only.
+ */
 app.get("/orders",async (req, res) => {
 	
 	if(!req.query.oid && req.query.uid) {
