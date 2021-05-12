@@ -12,7 +12,7 @@ const mongoose = require("mongoose");
 // Global Order Object which will be the instance of MongoDB document
 var Order;
 async function connectMongoose() {
-	await mongoose.connect("mongodb+srv://Rushikesh:Password%40123@cluster0.3o1qg.mongodb.net/OrdersCollection?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology:true }).then(() =>{
+	await mongoose.connect("{process.env.mongoDbUrl}", { useNewUrlParser: true, useUnifiedTopology:true }).then(() =>{
 		console.log("mongoose connected..")
 	})
 	require("./Order");
