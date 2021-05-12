@@ -13,7 +13,7 @@ const mongoose = require("mongoose");
 // Global User Object which will be the instance of MongoDB document
 var User;
 async function connectMongoose() {
-	await mongoose.connect("mongodb+srv://Rushikesh:Password%40123@cluster0.3o1qg.mongodb.net/UsersCollection?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology:true }).then(() =>{
+	await mongoose.connect("${process.env.mongoDbUrl}", { useNewUrlParser: true, useUnifiedTopology:true }).then(() =>{
 		console.log("mongoose connected..")
 	})
 	require("./User")
