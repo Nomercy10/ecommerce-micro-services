@@ -1,37 +1,63 @@
-## Welcome to GitHub Pages
+## Ecommerce micro-services demo
 
-You can use the [editor on GitHub](https://github.com/Nomercy10/ecommerce-micro-services/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This repo currently, has two micro-services
+- Users : A micro-service which has basic user features/functionalities like CRUD and order CRUD
+- Orders : A micro-service which has basic order features/functionalities like CRUD order
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Features
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+List of all the APIs it includes
 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+- GET all orders for a user
+- GET single order for a user
+- GET single user
+- GET all users
+- GET all orders for an user
+- GET an order for a user
+- Create an order for a user
+- Create new user
+- Create new order for a user
+- DEL a single order
+- DEL all orders for a user
+- DEL user by userId
+- DEL all the orders for an user
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Features
 
-### Jekyll Themes
+```markdown
+- [node.js] - evented I/O for the backend
+- [Express] - fast node.js network app framework [@tjholowaychuk]
+- [Mongo DB] - great UI boilerplate for modern web apps
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Nomercy10/ecommerce-micro-services/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+### Installation
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Postman
+- Requires Postman to run the APIs
+- Use `ecommerce microservice demo.postman_collection.json` from the repo root and import in your postman.
+
+#### Users
+Requires [Node.js](https://nodejs.org/) v10+ to run.
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+cd Users
+npm i --save express mongoose body-parser axios nodemon
+nodemon Users.js
+```
+
+#### Orders
+Requires [Node.js](https://nodejs.org/) v10+ to run.
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+cd Orders
+npm i --save express mongoose body-parser axios nodemon
+nodemon Orders.js
+```
+
